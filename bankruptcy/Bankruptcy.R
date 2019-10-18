@@ -1,6 +1,6 @@
 #Bankruptcy Case
 
-setwd("C:/Users/graeme/Documents/OMIS 3000 - R/csv Files/dmba")   # Adapt this to point to your data diectory
+setwd("bankruptcy")   # Adapt this to point to your data diectory
 bankrupt.df <- read.csv("Bankruptcy.csv", header = TRUE)  # load Bankruptcy.csv
 str(bankrupt.df) # get a sense of the columns of data
 table(is.na(bankrupt.df))  # check for NAs and NaNs
