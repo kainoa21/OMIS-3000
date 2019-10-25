@@ -1,6 +1,6 @@
 #Bankruptcy Case
 
-setwd("bankruptcy")   # Adapt this to point to your data diectory
+setwd("~/bankruptcy")   # Adapt this to point to your data diectory
 bankrupt.df <- read.csv("Bankruptcy.csv", header = TRUE)  # load Bankruptcy.csv
 str(bankrupt.df) # get a sense of the columns of data
 table(is.na(bankrupt.df))  # check for NAs and NaNs
@@ -99,8 +99,8 @@ parcoord(bankrupt.df[bankrupt.df$D == 1,-1],main = "D = 1")
 ## Keep in mind, as you treat outliers, that you only have about 130 rows of data!
 
 #Checking for highly correlated columns
-install.packages("reshape")
-installed.packages("tidyr")
+#install.packages("reshape")
+#installed.packages("tidyr")
 library(reshape)
 library(ggplot2)
 cor.mat <- round(cor(bankrupt.df[,-1]),2)
@@ -242,7 +242,7 @@ xyplot(lift.logit,label="gain",main="Boost Classifier")
 #to reduce overfitting, and it is one of the differences from the gradient 
 # boosting. Another advantage of XGBoost over classical gradient boosting 
 #is that it is fast in execution speed.
-install.packages("xgboost")
+#install.packages("xgboost")
 library(xgboost)
 #Note, the training x data should be matrix type to use in xgboost model.
 train_x <- data.matrix(training[,-1])
